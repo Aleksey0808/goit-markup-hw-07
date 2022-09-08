@@ -29,7 +29,7 @@
     <ul class="contacts__list">
       <li class="contacts__item">
         <a class="contacts__link" href="mailto:info@devstudio.com">
-          <svg class="contacts__icon--email">
+          <svg class="contacts__icon contacts__icon--email">
             <use href="./images/symbol-defs.svg#mail"></use>
           </svg>
           info@devstudio.com
@@ -37,7 +37,7 @@
       </li>
       <li class="contacts__item">
         <a class="contacts__link" href="tel:+380961111111">
-          <svg class="contacts__icon--phone">
+          <svg class="contacts__icon contacts__icon--phone">
             <use href="./images/symbol-defs.svg#phone"></use>
           </svg>
           +38 096 111 11 11
@@ -172,7 +172,7 @@
         <img class="team__imag" src="./images/gallery/img(1).jpg" width="270" alt="Frontend Developer">
         <h3 class="team__name">Ольга Рєпіна</h3>
         <p class="team__profession">Frontend Developer</p>
-        <ul class="team__social social">
+        <ul class="team__social">
           <li class="social__br">
             <a class="social__link" href="">
               <svg class="social__icon" width="20" height="20">
@@ -207,7 +207,7 @@
         <img class="team__imag" src="./images/gallery/img(2).jpg" width="270" alt="Marketing">
         <h3 class="team__name">Микола Тарасов</h3>
         <p class="team__profession">Marketing</p>
-          <ul class="team__social social">
+          <ul class="team__social">
             <li class="social__br">
             <a class="social__link" href="">
               <svg class="social__icon" width="20" height="20">
@@ -242,7 +242,7 @@
         <img class="team__imag" src="./images/gallery/img(3).jpg" width="270" alt="UI Designer">
         <h3 class="team__name">Михайло Єрмаков</h3>
         <p class="team__profession">UI Designer</p>
-        <ul class="team__social social">
+        <ul class="team__social">
           <li class="social__br">
             <a class="social__link" href="">
               <svg class="social__icon" width="20" height="20">
@@ -348,28 +348,28 @@
       <p class="footer__title">приєднуйтесь</p>
       <ul class="footer__social">
         <li class="social__br">
-          <a class="social__link footer--color" href="">
+          <a class="social__link social__link--color" href="">
             <svg class="social__icon" width="20" height="20">
               <use href="./images/symbol-defs.svg#instagram"></use>
             </svg>
           </a>
         </li>
         <li class="social__br">
-          <a class="social__link footer--color" href="">
+          <a class="social__link social__link--color" href="">
             <svg class="social__icon" width="20" height="20">
               <use href="./images/symbol-defs.svg#twitter"></use>
             </svg>
           </a>
         </li>
         <li class="social__br">
-          <a class="social__link footer--color" href="">
+          <a class="social__link social__link--color" href="">
             <svg class="social__icon" width="20" height="20">
               <use href="./images/symbol-defs.svg#facebook"></use>
             </svg>
           </a>
         </li>
         <li class="social__br">
-          <a class="social__link footer--color" href="">
+          <a class="social__link social__link--color" href="">
             <svg class="social__icon" width="20" height="20">
               <use href="./images/symbol-defs.svg#linkedin"></use>
             </svg>
@@ -405,7 +405,9 @@
           <fieldset>
             <div class="modal__field">
               <label class="modal__label" for="username">Ім'я </label>
-              <input class="modal__input" type="text" name="username" id="username" required />
+              <input class="modal__input" type="text" name="username" id="username" required 
+              pattern="^[a-zA-Z]+$" 
+              title="Username" />
               <svg class="modal__icon" width="12" height="12">
                 <use href="./images/symbol-defs.svg#name"></use>
               </svg>
@@ -432,7 +434,7 @@
               <label class="treaty__label">
                 <input class="treaty__input" type="checkbox" value="confirmation" required>
                  <span class="treaty__check"></span>
-                Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a>
+                Погоджуюся з розсилкою та приймаю &nbsp; <a href="">Умови договору</a>
               </label>
             </div>
             <button class="modal__button" type="submit">Відправити</button>

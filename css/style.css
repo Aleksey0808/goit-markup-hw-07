@@ -160,27 +160,24 @@ body {
 	color: var(--active-color);
 }
 
-.contacts__icon--email {
-	width: 16px;
-	height: 12px;
+.contacts__icon {
 	margin: 0 10px 0 0;
 	fill: currentColor;
 	transition: fill var(--animation);
+}
+
+.contacts__icon--email {
+	width: 16px;
+	height: 12px;
 }
 
 .contacts__icon--phone {
 	width: 10px;
 	height: 16px;
-	margin: 0 10px 0 0;
-	fill: currentColor;
-	transition: fill var(--animation);
 }
 
+.contacts__icon--phone:hover,
 .contacts__icon--email:hover {
-	fill: currentColor;
-}
-
-.contacts__icon--phone:hover {
 	fill: currentColor;
 }
 
@@ -611,7 +608,7 @@ address {
 	column-gap: 10px;
 }
 
-.footer--color {
+.social__link--color {
 	background: rgba(255, 255, 255, 0.1);
 	color: #fff;
 }
@@ -719,7 +716,14 @@ address {
 	transition: border var(--animation);
 }
 
-.modal__comments:hover,
+.modal__comments::placeholder {
+	font-size: 12px;
+	line-height: 1.16;
+	letter-spacing: 0.01em;
+
+	color: rgba(117, 117, 117, 0.5);
+}
+
 .modal__comments:focus {
 	border: 1px solid #2196F3;
 }
@@ -746,12 +750,11 @@ address {
 	transition: border var(--animation);
 }
 
-.modal__input:hover,
+
 .modal__input:focus {
 	border: 1px solid #2196F3;
 }
 
-.modal__input:hover + .modal__icon,
 .modal__input:focus + .modal__icon {
 	fill: var(--active-color);
 	border-color:#2196F3;
@@ -795,6 +798,10 @@ address {
 	position: absolute; */
 }
 
+.treaty__input:focus + .treaty__check {
+	box-shadow: 0px 0px 0px 1px var(--active-color);
+}
+
 .treaty__check {
 	display: inline-block;
 	width: 16px;
@@ -821,7 +828,6 @@ address {
 .treaty__label a {
 	text-decoration: underline;
 	color: var(--active-color);
-	margin-left: 5px;
 }
 
 .modal__button {
